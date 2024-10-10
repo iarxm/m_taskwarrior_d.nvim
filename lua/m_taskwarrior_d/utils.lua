@@ -494,6 +494,10 @@ function M.parse_ISO8601_date(iso_date)
 end
 
 function M.render_virtual_due_dates(start_line, end_line)
+  if true then
+      return nil
+  end
+
   if start_line == nil then
     start_line = 0
     if end_line == nil then
