@@ -36,13 +36,13 @@ function M.sync_tasks(start_position, end_position)
     if string.match(current_line, M._config.checkbox_pattern.lua) then
       M.utils.sync_task(current_line, line_number)
     end
-    if string.match(current_line, M._config.task_query_pattern.lua) then
-      table.insert(headers, { line = current_line, line_number = line_number })
-    end
+    --if string.match(current_line, M._config.task_query_pattern.lua) then
+    --  table.insert(headers, { line = current_line, line_number = line_number })
+    --end
   end
-  for _, header in pairs(headers) do
-    M.utils.apply_context_data(header.line, header.line_number)
-  end
+  --for _, header in pairs(headers) do
+  --  M.utils.apply_context_data(header.line, header.line_number)
+  --end
 end
 
 function M.edit_task()
